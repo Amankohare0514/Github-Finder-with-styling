@@ -5,6 +5,8 @@ import Loading from "../components/Loading";
 import Repo from "../components/Repo";
 import Tabs from "../components/Tabs";
 import UsersContainer from "../components/UsersContainer";
+import DataObjectOutlinedIcon from '@mui/icons-material/DataObjectOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
 const UserInfo = () => {
   const [user, setUser] = useState([]);
   const [type, setType] = useState("repos");
@@ -39,7 +41,7 @@ const UserInfo = () => {
         onClick={() => navigate("/")}
         className="px-5 py-1 font-medium mx-1 my-4 bg-teal-600 rounded text-gray-200"
       >
-        BACK
+        Overview <DataObjectOutlinedIcon/>
       </button>
       {user &&
         user?.map((uinfo, i) => (
@@ -50,12 +52,15 @@ const UserInfo = () => {
           >
             <img
               src={uinfo.avatar_url}
-              className="w-[350px] border-4 border-teal-400 md:mx-0 mx-auto"
+              className="w-[350px] border-4 border-teal-400 md:mx-0 mx-auto rounded-full"
             />
             <div className="text-lg leading-10 px-3">
               <h1 className="text-3xl pb-4">{uinfo.name}</h1>
               <h1>
-                <span className="text-teal-400">Login_name</span> :{uinfo.login}
+                <span className="text-teal-400"></span>{uinfo.login}
+              </h1>
+              <h1>
+                <span className="text-teal-400">Bio</span> : {uinfo.bio}
               </h1>
               <h1>
                 <span className="text-teal-400">followers : </span>
@@ -76,14 +81,14 @@ const UserInfo = () => {
               <a
                 href={uinfo.html_url}
                 target="_blank"
-                className="text-gray-200 
-                  font-semibold rounded cursor-pointer  px-4 py-1 bg-teal-600 my-3 tracking-wide"
-              >
-                Visit
+                className="text-gray-900 
+                  font-semibold rounded cursor-pointer  px-4 py-1 bg-gray-100 my-3 tracking-wide">
+                Visit <GitHubIcon/>
               </a>
             </div>
           </div>
         ))}
+        
       <div className="flex border-b pb-4 gap-6 mt-[10%] mb-6 justify-center md:text-xl ">
         <Tabs type={type} setType={setType} />
       </div>

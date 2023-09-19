@@ -21,7 +21,7 @@ const UsersContainer = ({ users }) => {
                   className="text-gray-100 
                   font-semibold rounded block px-4 py-1 bg-teal-900 my-3 tracking-wide"
                 >
-                  View
+                  view
                 </span>
               </Link>
             </div>

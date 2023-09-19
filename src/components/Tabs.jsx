@@ -1,24 +1,27 @@
 import React from "react";
+import CorporateFareIcon from '@mui/icons-material/CorporateFare';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import LoopIcon from '@mui/icons-material/Loop';
 const Tabs = ({ type, setType }) => {
   return (
     <>
       <button
-        className={`${type === "repos" && "text-teal-400"}`}
+        className={`${type === "repos" && "text-teal-100 border text-2xl"}`}
         onClick={() => setType("repos")}
       >
-        Repositories
+        Repositories  <CorporateFareIcon/>
       </button>
       <button
-        className={`${type === "received_events" && "text-teal-400"}`}
+        className={`${type === "received_events" && "text-teal-100 border text-2xl"}`}
         onClick={() => setType("received_events")}
       >
-        Activity
+        Activity <LoopIcon/>
       </button>
       <button
-        className={`${type === "followers" && "text-teal-400"}`}
+        className={`${type === "followers" && "text-teal-100 border text-2xl"}`}
         onClick={() => setType("followers")}
       >
-        followers
+        followers <Diversity3Icon/>
       </button>
     </>
   );

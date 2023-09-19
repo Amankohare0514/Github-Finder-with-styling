@@ -7,7 +7,6 @@ const Users = () => {
   const [loading, setLoading] = useState(null);
   const user = useRef("");
   let EndPoint = "https://api.github.com/users";
-
   async function AllUesrs() {
     if (user.current.value === "") {
       setLoading(true);

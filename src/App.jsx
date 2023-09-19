@@ -6,7 +6,7 @@ import Users from "./Routes/Users";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-800 ">
+    <div className="min-h-screen bg-gray-900 ">
       <div className="container text-gray-200 py-3">
         <Logo />
         <Routes>
