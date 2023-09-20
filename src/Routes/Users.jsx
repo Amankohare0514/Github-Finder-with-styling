@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Loading from "../components/Loading";
 import UsersContainer from "../components/UsersContainer";
-
+import SearchIcon from '@mui/icons-material/Search';
 const Users = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(null);
@@ -40,17 +40,17 @@ const Users = () => {
     <div>
       <div className="flex justify-center h-11  my-5 items-center">
         <input
-          placeholder="Search github username"
+          placeholder="Find User"
           ref={user}
           type="text"
-          className="h-full md:w-1/3 outline-none text-gray-800 px-2 
-          font-semibold text-lg w-2/3"
+          className="h-full md:w-1/3 outline-none bg-gray-200 text-gray-800 px-2 
+          font-semibold text-lg w-2/3 rounded"
         />
         <button
           onClick={FindUser}
-          className="bg-teal-500 font-semibold  px-4 h-full font-[Poppins]"
+          className="bg-teal-900 font-semibold  px-4 h-full font-[Poppins] rounded"
         >
-          Search
+          Search <SearchIcon/>
         </button>
       </div>
       <div>{loading ? <Loading /> : <UsersContainer users={users} />}</div>
