@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import Repo from "../components/Repo";
 import Tabs from "../components/Tabs";
 import UsersContainer from "../components/UsersContainer";
-import DataObjectOutlinedIcon from '@mui/icons-material/DataObjectOutlined';
+import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 const UserInfo = () => {
   const [user, setUser] = useState([]);
@@ -41,7 +41,7 @@ const UserInfo = () => {
         onClick={() => navigate("/")}
         className="px-5 py-1 font-medium mx-1 my-4 bg-teal-600 rounded text-gray-200"
       >
-        Overview <DataObjectOutlinedIcon/>
+       Bact To <HomeIcon/>
       </button>
       {user &&
         user?.map((uinfo, i) => (
@@ -63,15 +63,15 @@ const UserInfo = () => {
                 <span className="text-teal-400">Bio</span> : {uinfo.bio}
               </h1>
               <h1>
-                <span className="text-teal-400">followers : </span>
+                <span className="text-teal-400">Followers : </span>
                 {uinfo.followers}
               </h1>
               <h1>
-                <span className="text-teal-400">following : </span>
+                <span className="text-teal-400">Following : </span>
                 {uinfo.following}
               </h1>
               <h1>
-                <span className="text-teal-400">public_repositories : </span>
+                <span className="text-teal-400">Repositories : </span>
                 {uinfo.public_repos}
               </h1>
               <h1>
