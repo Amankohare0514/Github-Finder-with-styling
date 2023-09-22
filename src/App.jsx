@@ -3,10 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import UserInfo from "./Routes/UserInfo";
 import Users from "./Routes/Users";
-
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-900 ">
+    <div className="min-h-screen bg-black dark:bg-white">
       <div className="container text-gray-200 py-3">
         <Logo />
         <Routes>

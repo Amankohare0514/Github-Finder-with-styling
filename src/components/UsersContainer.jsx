@@ -8,14 +8,14 @@ const UsersContainer = ({ users }) => {
           user?.login ? (
             <div
               key={idx}
-              className="flex w-[200px] border border-gray-500 bg-gray-800 p-3 flex-col items-center"
+              className="flex w-[200px] border dark:border-gray-900 border-gray-500 dark:bg-gray-200 bg-gray-900 p-3 flex-col items-center"
             >
               <img
                 src={user?.avatar_url}
-                className="w-24 mb-4 border-4  border-gray-900 rounded-full"
+                className="w-24 mb-4 border-4 dark:text-black dark:border-gray-900 border-gray-500 rounded-full"
               />
               <h1 className="text-xl">{user?.login}</h1>
-              <h1 className="text-xs text-teal-100">{user?.name}</h1>
+              <h1 className="text-xs dark:text-black text-teal-100">{user?.name}</h1>
               <Link to={`/${user?.login}`}>
                 <span
                   className="text-gray-100 
