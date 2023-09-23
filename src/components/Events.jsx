@@ -5,7 +5,7 @@ const Events = ({ data }) => {
   return (
     <>
       {data?.map((ev, i) => (
-        <div key={i} className="flex gap-x-4 items-center">
+        <div key={i} className="flex gap-x-4 items-center dark:text-black">
           <Link to={`/${ev.actor?.login}`}>
             <img src={ev.actor?.avatar_url} className="w-16 rounded-full" />
           </Link>

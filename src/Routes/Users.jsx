@@ -43,12 +43,12 @@ const Users = () => {
           placeholder="Find User"
           ref={user}
           type="text"
-          className="h-full md:w-1/3 outline-none bg-gray-200 text-gray-800 px-2 
-          font-semibold text-lg w-2/3 rounded"
+          className="h-full md:w-1/3 outline-none bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white px-2 
+          font-semibold text-lg w-2/3"
         />
         <button
           onClick={FindUser}
-          className="bg-teal-900 font-semibold  px-4 h-full font-[Poppins] rounded"
+          className="bg-teal-900 font-semibold  px-4 h-full font-[Poppins]  dark:bg-gray-800"
         >
           Search <SearchIcon/>
         </button>

@@ -47,7 +47,7 @@ const UserInfo = () => {
         user?.map((uinfo, i) => (
           <div
             key={i}
-            className="flex justify-center md:flex-row
+            className="flex justify-center md:flex-row dark:text-gray-700
              md:px-0 px-4 flex-col gap-10"
           >
             <img
@@ -55,27 +55,27 @@ const UserInfo = () => {
               className="w-[350px] border-4 border-teal-400 md:mx-0 mx-auto rounded-full"
             />
             <div className="text-lg leading-10 px-3">
-              <h1 className="text-3xl pb-4">{uinfo.name}</h1>
+              <h1 className="text-3xl pb-4 dark:text-black">{uinfo.name}</h1>
               <h1>
-                <span className="text-teal-400"></span>{uinfo.login}
+                <span className="text-teal-400 dark:text-black"></span>{uinfo.login}
               </h1>
               <h1>
-                <span className="text-teal-400">Bio</span> : {uinfo.bio}
+                <span className="text-teal-400 dark:text-black">Bio</span> : {uinfo.bio}
               </h1>
               <h1>
-                <span className="text-teal-400">Followers : </span>
+                <span className="text-teal-400 dark:text-black">Followers : </span>
                 {uinfo.followers}
               </h1>
               <h1>
-                <span className="text-teal-400">Following : </span>
+                <span className="text-teal-400 dark:text-black">Following : </span>
                 {uinfo.following}
               </h1>
               <h1>
-                <span className="text-teal-400">Repositories : </span>
+                <span className="text-teal-400 dark:text-black">Repositories : </span>
                 {uinfo.public_repos}
               </h1>
               <h1>
-                <span className="text-teal-400">Join : </span>
+                <span className="text-teal-400 dark:text-black">Join : </span>
                 {new Date(uinfo.created_at).toLocaleDateString()}
               </h1>
               <a
@@ -89,12 +89,12 @@ const UserInfo = () => {
           </div>
         ))}
         
-      <div className="flex border-b pb-4 gap-6 mt-[10%] mb-6 justify-center md:text-xl ">
+      <div className="flex border-b pb-4 gap-6 mt-[10%] mb-6 justify-center md:text-xl dark:text-gray-700">
         <Tabs type={type} setType={setType} />
       </div>
       {loadind && <Loading />}
       {type === "repos" && (
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-7 w-10/12 mx-auto">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-7 w-10/12 mx-auto ">
           {users && <Repo users={users} />}
         </div>
       )}

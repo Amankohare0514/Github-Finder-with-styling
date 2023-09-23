@@ -19,7 +19,7 @@ const Logo = () => {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" className="w-16 rounded-full h-16" />
-          <span className="ml-3 text-3xl text-white">Github Finder</span>
+          <span className="ml-3 text-3xl text-white dark:text-black">Github Finder</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           <div className="flex-none">
